@@ -4,7 +4,7 @@ class MySQL {
 	private $conexion;
 	private $total_consultas;
 	
-	public function MySQL(){
+	public function  __construct(){
 		if(!isset($this->conexion)){
 			$this->conexion = (mysql_connect("localhost","root","31284081"))
 			or die(mysql_error());

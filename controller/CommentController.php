@@ -17,7 +17,7 @@ class CommentController {
 			$index = $_GET['index'];
 		}
 		$comments = $this->model->getCommentsLimit($rows,$index);
-        include 'view/comments.php';  
+        include 'view/comments/comments.php';  
 	}
 }
 ?>

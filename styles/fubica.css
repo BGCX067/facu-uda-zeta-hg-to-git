@@ -1,0 +1,125 @@
+@CHARSET "UTF-8";
+
+body, label, input, textarea, select, button {
+    font-family: "Helvetica Neue",Arial,sans-serif;
+   
+}
+body {
+    color: #333333;
+    font-size: 14px;
+    line-height: 18px;
+    background-image: url("../assest/background.jpg");
+    background-attachment: fixed;
+    background-color: black;
+    background-position: left 40px;
+    background-repeat: no-repeat;
+}
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none outside none;
+}
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 0;
+    color: #333333;
+    margin: 0;
+    text-rendering: optimizelegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333333;
+}
+img {
+    border: 0 none;
+}
+#page-container{
+	height: 100%;
+	display: table;
+}
+.topbar{
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1000;
+}
+
+.nav {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #0184DE;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+}
+
+.wrapper {
+    background: url("../assest/wash-white-30.png") repeat scroll 0 0 transparent;
+    margin: 0 auto;
+    min-height: 100%;
+    padding: 54px 14px 15px;
+    position: relative;
+    width: 837px;
+}
+.dashboard {
+    float: left;
+    width: 302px;
+}
+.content-main {
+    float: right;
+    width: 522px;
+}
+.content-main {
+    border-radius: 6px 6px 6px 6px;
+}
+.content-header {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E8E8E8;
+    border-radius: 5px 5px 0 0;
+    border-bottom-width: 1;
+    min-height: 20px;
+    padding: 12px;
+}
+.comment-container {
+	margin: 0px;
+}
+.comment-item {
+    background: none repeat scroll 0 0 padding-box #FFFFFF;
+}
+.comment {
+    cursor: pointer;
+    border-bottom: 1px solid #E8E8E8;
+    min-height: 51px;
+    padding: 9px 12px;
+    position: relative;
+}
+.comment-content {
+    margin-left: 58px;
+}
+.comment-header .avatar {
+    left: 12px;
+    position: absolute;
+    top: 12px;
+}
+.avatar {
+    border-radius: 5px 5px 5px 5px;
+    height: 48px;
+    width: 48px;
+}
+.fullname {
+    color: #333333;
+    font-weight: bold;
+}
+.message-text 	 {
+    word-wrap: break-word;
+}
+p {
+    margin: 0;
+}
