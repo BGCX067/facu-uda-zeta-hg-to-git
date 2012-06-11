@@ -123,3 +123,36 @@ img {
 p {
     margin: 0;
 }
+.comment-pagination {
+	margin-top: 5px;
+	
+}
+
+.button-default {
+    background-color: #E0E0E0;
+	background-image: -moz-linear-gradient(center top , #C8C8C8 0px, #E6E6E6 100%);    
+    border-color: #888888 #AAAAAA #CCCCCC;
+    box-shadow: 0 0 1px #FFFFFF inset;
+    text-shadow: 0 1px 0 #FFFFFF;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 2px 2px 2px 2px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    outline: 0 none;
+    padding: 0 10px;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-wrap: normal;
+    color: #555555;
+}
+.button-default-disabled {
+	background-image: -moz-linear-gradient(center top , #FAFAFA 0px, #DCDCDC 100%);
+}
+.comment-pagination ul li{
+	float: left;
+}

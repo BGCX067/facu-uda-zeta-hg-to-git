@@ -52,8 +52,11 @@ class CommentModel extends Model {
 		return $comment;
 	}
 	
-	public function getCommentsLimit($row_count,$offset) {
-		$from = $offset * $row_count;
+	public function getCommentsLimit($row_count,$offset,$commentsQty) {
+		$from = $commentsQty  - ( $offset * $row_count +  $row_count);
+		if($from < 0){
+			$from = 0;
+		}
 		$arr[] = array();
 		$query = "SELECT
 				`comment`.`id`,
@@ -62,16 +65,29 @@ class CommentModel extends Model {
 				`comment`.`message`,
 				`comment`.`imageUrl`
 				FROM `lab3`.`comment` limit $from, $row_count";
-
+		
 		$result = $this->db->query($query);
 		if(isset($result)) {
+			$i = 0;
 			while ($row = mysql_fetch_object($result)) {
 				if(isset($row)){
-					$arr[$row->id] = new Comment($row->id, $row->name,$row->email, $row->message, $row->imageUrl);
+					$arr[$i++] = new Comment($row->id, $row->name,$row->email, $row->message, $row->imageUrl);
 				}
 			}
 		}
 		return $arr;
+	}
+	
+	public function getCountComments(){
+		$query = "SELECT count(`comment`.`name`) FROM `lab3`.`comment`";
+		
+		$result = $this->db->query($query);
+		$result = mysql_result($result, 0);
+		
+		if(!isset($result)) {
+			$result = 0;
+		}
+		return intval($result);
 	}
 	
 }

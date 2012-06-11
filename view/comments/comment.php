@@ -3,7 +3,7 @@
 		<div class="comment-content">
 			<div class="comment-header">
 				<a> <img class="avatar"
-					src="<?php echo $url.'images/'.$comment->imageUrl?>" /> <strong
+					src="<?php echo $url.'assest/avatar/'.$comment->imageUrl?>" /> <strong
 					class="fullname"><?php echo $comment->name ?>
 				</strong>
 				</a>

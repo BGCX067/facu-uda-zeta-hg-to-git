@@ -8,6 +8,8 @@ class CommentController {
 	}
 	
 	public function listCommnets() {
+		
+		
 		$rows = 20;
 		$index = 0; 
 		if(!empty($_GET['rows'])){
@@ -16,8 +18,17 @@ class CommentController {
 		if(!empty($_GET['index'])){
 			$index = $_GET['index'];
 		}
-		$comments = $this->model->getCommentsLimit($rows,$index);
-        include 'view/comments/comments.php';  
+		$commentsQty =$this->model->getCountComments(); 
+		$pages =  $commentsQty/$rows;
+		$comments = $this->model->getCommentsLimit($rows,$index,$commentsQty);
+		$comments = array_reverse($comments);
+		$isPaginated = $pages > 1;
+        include  'view/comments/comments.php';  
+	}
+	
+	public function commentsMenu(){
+		include  'view/comments/commentsMenu.php';
 	}
 }
+
 ?>
