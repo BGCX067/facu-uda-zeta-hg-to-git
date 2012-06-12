@@ -150,6 +150,9 @@ p {
     word-wrap: normal;
     color: #555555;
 }
+.comment-pagination a {
+    margin-left: 3px;
+}
 .button-default-disabled {
 	background-image: -moz-linear-gradient(center top , #FAFAFA 0px, #DCDCDC 100%);
 }

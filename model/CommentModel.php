@@ -79,7 +79,7 @@ class CommentModel extends Model {
 	}
 	
 	public function getCountComments(){
-		$query = "SELECT count(`comment`.`name`) FROM `lab3`.`comment`";
+		$query = "SELECT count(`comment`.`id`) FROM `lab3`.`comment`";
 		
 		$result = $this->db->query($query);
 		$result = mysql_result($result, 0);

@@ -1,5 +1,6 @@
 var Comments = function() {
-	var index = 0;
+	
+	this.content = document.getElementById('content');
 	
 	this.bindEvent = function() {
 		var navigators = document.getElementsByName('nav');
@@ -12,6 +13,6 @@ var Comments = function() {
 		var element = event.currentTarget;
 		var page = element.getAttribute("data-page");
 		
-		load_page("Comment", "listCommnets", "index="+page , document.getElementById('content'));
+		load_page("Comment", "listCommnets", "index="+page , this.content );
 	};
 };
