@@ -38,6 +38,16 @@ h1, h2, h3, h4, h5, h6 {
 img {
     border: 0 none;
 }
+input, textarea, select {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+    margin: 0;
+    font-size: 13px;
+    outline: medium none;
+    padding: 4px;
+    width: 210px;
+}
 #page-container{
 	height: 100%;
 	display: table;
@@ -168,6 +178,11 @@ p {
     color: #FFFFFF;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
+.attachment {
+    margin-top: 12px;
+    max-height: 420px;
+    max-width: 420px;
+}
 
 .btn {
     cursor: pointer;
@@ -180,10 +195,6 @@ p {
     position: relative;
 }
 .button-comment-container {
-    text-align: right;
-    height: 29px;
-    margin: 5px 0 3px;
-    position: relative;
     text-align: right;
 }
 .box {
@@ -206,22 +217,41 @@ p {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) inset, 0 1px 0 #FFFFFF;
     resize: vertical;
 }
-
+.placeholder {
+    bottom: 1px;
+    color: #999999;
+    cursor: text;
+    font-size: 13px;
+    line-height: 25px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    top: 1px;
+    white-space: nowrap;
+    z-index: 1;
+}
 .placeholding-input {
     display: block;
-    height: 30px;
-    margin: 6px auto;
+    height: 20px;
     width: 276px;
     overflow: visible;
     position: relative;
 }
 .text-input {
-    width: 266px;
-    height: 20px;
+    width: 256px;
+    height: 23px;
     border: 1px solid #CCCCCC;
     box-shadow: 0 1px 0 #EEEEEE inset, 0 1px 0 #FFFFFF;
 }
+.file-input {
+	cursor: pointer;
+	font-size: 50px;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	height: 34px;
+	width: 108px;
+	z-index: 10;
+}
 input {
-    position: absolute;
+/*     position: absolute; */
     top: 0;
 }

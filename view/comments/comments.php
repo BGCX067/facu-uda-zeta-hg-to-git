@@ -26,5 +26,5 @@
 <?php }?>
 <script type="text/javascript">
 	var comments = new Comments();
-	comments.bindEvent();
+	comments.bindEvents();
 </script>

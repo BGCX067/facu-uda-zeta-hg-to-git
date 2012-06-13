@@ -90,5 +90,11 @@ class CommentModel extends Model {
 		return intval($result);
 	}
 	
+	public function insertComment($name,$email,$message,$imageName) {
+		$query = "INSERT INTO comment (name,email,message,imageUrl) VALUES('$name','$email','$message','$imageName')";
+		echo $query;
+		$result = $this->db->query($query);
+		return mysql_insert_id();
+	}
 }
 ?>

@@ -18,6 +18,7 @@ function Ajax() {
 function load_page(cotroller,action,params,contenedor){
 	 return load(cotroller,action,params,contenedor,new Ajax());
 }
+
 function load(cotroller,action,params,contenedor,ajax){
     //ajax=new Ajax(); 
     var url = '/depo-web/index.php?c=' + cotroller + '&a=' + action;
@@ -46,6 +47,42 @@ function load(cotroller,action,params,contenedor,ajax){
     };
     ajax.send(null);
 }
+
+function sendPost(cotroller,action,params,contenedor) {
+	sendRequestPost(cotroller,action,params,contenedor,new Ajax());
+}
+
+function sendRequestPost(cotroller,action,params,contenedor,http) {
+	var url = '/depo-web/index.php?c=' + cotroller + '&a=' + action;
+	http.open("POST", url, true);
+
+	//Send the proper header information along with the request
+	http.setRequestHeader("Content-type", "multipart/form-data");
+	http.setRequestHeader("Content-length", params.length);
+	http.setRequestHeader("Connection", "close");
+
+	http.onreadystatechange =function(){
+        if(ajax.readyState==1){
+            //Sucede cuando se esta cargando la pagina
+            contenedor.innerHTML = "cargando()";//<-- Aca puede ir una precarga
+        }else if(ajax.readyState==4){
+            //Sucede cuando la pagina se cargó
+            if(ajax.status==200){
+                //Todo OK
+                contenedor.innerHTML = ajax.responseText;
+                runJs(ajax.responseText);
+            }else if(ajax.status==404){
+                //La pagina no existe
+                contenedor.innerHTML = "La página no existe";
+            }else{
+                //Mostramos el posible error
+                contenedor.innerHTML = "Error:".ajax.status; 
+            }
+        }
+    };
+	http.send(params);
+}
+
 
 function runJs(response) {
 	var search = response;

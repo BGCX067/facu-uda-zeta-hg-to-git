@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="<?php echo $url.'styles/fubica.css'?>" type="text/css" media="screen" >
 		<script type="text/javascript" src="<?php echo $url.'scripts/ajax.js'?>" ></script>
 		<script type="text/javascript" src="<?php echo $url.'scripts/home/home.js'?>" ></script>
+		<script type="text/javascript" src="<?php echo $url.'scripts/common.js'?>" ></script>
 		<script type="text/javascript" src="<?php echo $url.'scripts/comments.js'?>" ></script>
 	</head>
 	<body>

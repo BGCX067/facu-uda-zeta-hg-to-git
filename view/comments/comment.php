@@ -3,7 +3,7 @@
 		<div class="comment-content">
 			<div class="comment-header">
 				<a> <img class="avatar"
-					src="<?php echo $url.'assest/avatar/'.$comment->imageUrl?>" /> <strong
+					src="assest/avatar/avatar.jpg" /> <strong
 					class="fullname"><?php echo $comment->name ?>
 				</strong>
 				</a>
@@ -11,6 +11,13 @@
 					<?php echo $comment->message ?>
 				</p>
 			</div>
+			<?php if (isset($comment->imageUrl) && $comment->imageUrl != "" ){?>
+			<div>
+				<a> <img class="attachment"
+					src="<?php echo 'img_recibidas/'.$comment->imageUrl?>" />
+				</a>
+			</div>
+			<?php }?>
 		</div>
 	</div>
 </div>
