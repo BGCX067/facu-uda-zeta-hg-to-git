@@ -7,5 +7,13 @@ class HomeController {
 	public function home() {
 		include 'view/home/home.php';
 	}
+	
+	public function menu() {
+		include 'view/home/menu.php';
+	}
+	public function about() {
+		include 'view/home/about.htmñ';
+	}
+	
 }
 ?>

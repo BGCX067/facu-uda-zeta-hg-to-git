@@ -24,8 +24,8 @@
 			<button class="btn" type="button">Elige archivo</button>
 			<span id="file-name" class="photo-file-name">No se ha seleccionado ningún archivo</span>
 		</div>
-		<div class="button-comment-container box">
-			<a class="button-comment btn" id="commit">Comentar</a>
+		<div id="commit" class="button-comment-container box">
+			<a class="button-comment btn">Comentar</a>
 		</div>
 	</form>
 	<iframe id="upload_target" name="upload_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe> 

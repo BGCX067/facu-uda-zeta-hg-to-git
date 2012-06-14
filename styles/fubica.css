@@ -255,3 +255,123 @@ input {
 /*     position: absolute; */
     top: 0;
 }
+.nav .container {
+    width: 865px;
+}
+.container {
+    margin: 0 auto;
+    position: relative;
+    width: 837px;
+}
+.nav {
+    margin-right: 12px;
+}
+.nav, .nav li {
+    float: left;
+    position: relative;
+}
+ul {
+    list-style: none outside none;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+	margin: 10px; 		
+	background-color: yellow;
+	height: 25px
+}
+
+.nav .active a {
+    background-color: #CC2222;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5) inset;
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.nav  li  a {
+    color: #BBBBBB;
+    display: block;
+    font-weight: bold;
+    height: 12px;
+    line-height: 1;
+    padding: 13px 12px 15px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
+    font-size: 12px;
+    position: relative;
+    text-decoration: none;
+}
+.nav .new-wrapper {
+    float: left;
+    position: relative;
+}
+
+.nav i {
+    float: left;
+    margin: -4px 6px 0 0;
+}
+i {
+	background-image: url("../assest/sprite_icons.png");
+}
+.nav .nav-home{
+	background-position: 0 -110px;
+	width: 22px;
+    height: 22px;
+}
+
+.text-area-error {
+    border: 1px solid Red;
+    width: 258px;
+}
+.error{
+	border: 1px solid Red;
+}
+
+.module {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.module {
+    background-clip: padding-box;
+    border-radius: 6px 6px 6px 6px;
+    line-height: 16px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.module .list-link {
+    border-top: 0 none;
+    display: block;
+    padding: 8px 12px;
+    position: relative;
+    background-color: #F9F9F9;
+    border-top: 1px solid #E8E8E8;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+    text-shadow: 0 1px 0 #FFFFFF;
+    line-height: 16px;
+    color: #0084B4;
+    text-decoration: none;
+}
+.module .first-link .list-link {
+	border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.module .active .list-link {
+    font-weight: bold;
+    background-color: #FFFFFF;
+    color: #333333;
+    text-decoration: none;
+}
+
+.chev-right  {
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    background-position: 0 -160px;
+    background-position: 0 -140px;
+    height: 13px;
+    width: 9px;
+  
+}

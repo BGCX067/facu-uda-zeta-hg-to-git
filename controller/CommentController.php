@@ -50,6 +50,7 @@ class CommentController {
 			}
 				
 		}
+		
 		$result = $this->model->insertComment($name, $email, $message, $filename);
 		
 		echo "<script language='javascript' type='text/javascript'>window.top.window.getMessage($result);</script>";
