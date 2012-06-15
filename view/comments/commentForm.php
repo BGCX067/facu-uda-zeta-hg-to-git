@@ -15,8 +15,7 @@
 			<span class="placeholder">Mensaje</span>
 			<div id="message-text-area" class="text-area">
 				<textarea dir="ltr" style="width: 258px; height: 82px;" name="message"
-					class="message-area">
-					</textarea>
+					class="message-area"></textarea>
 			</div>
 		</div>
 		<div style="position: relative; padding-left: 12px;">

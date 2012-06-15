@@ -320,6 +320,12 @@ i {
 	width: 22px;
     height: 22px;
 }
+.nav .nav-comment{
+	background-position: -80px -110px;
+	width: 22px;
+    height: 22px;
+}
+
 
 .text-area-error {
     border: 1px solid Red;
@@ -353,6 +359,7 @@ i {
     line-height: 16px;
     color: #0084B4;
     text-decoration: none;
+    cursor: pointer;
 }
 .module .first-link .list-link {
 	border-top-left-radius: 5px;

@@ -7,7 +7,6 @@ class TournamentController {
 	public function menu() {
 		include 'view/tournament/tournamentMenu.html';
 	}
-	
-	
+
 }
 ?>

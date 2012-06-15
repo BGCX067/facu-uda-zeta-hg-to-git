@@ -12,7 +12,13 @@ class HomeController {
 		include 'view/home/menu.php';
 	}
 	public function about() {
-		include 'view/home/about.htmñ';
+		include 'view/home/about.html';
+	}
+	public function contactme() {
+		include 'view/home/inConstruct.html';
+	}
+	public function price() {
+		include 'view/home/inConstruct.html';
 	}
 	
 }

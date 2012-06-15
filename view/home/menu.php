@@ -4,7 +4,7 @@
 			class="list-link">Sobre Fubica<i class="chev-right"></i>
 		</a>
 		</li>
-		<li class=""><a id="contacts" 
+		<li class=""><a id="contactme" 
 			class="list-link">Contactenos<i class="chev-right"></i>
 		</a>
 		</li>
@@ -22,3 +22,8 @@
 		</li>
 	</ul>
 </div>
+<script type="text/javascript">
+	var homeMenu = new HomeMenu();
+	homeMenu.b 	
+</script>
+

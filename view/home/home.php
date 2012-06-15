@@ -7,6 +7,7 @@
 		<script type="text/javascript" src="<?php echo $url.'scripts/ajax.js'?>" ></script>
 		<script type="text/javascript" src="<?php echo $url.'scripts/home/home.js'?>" ></script>
 		<script type="text/javascript" src="<?php echo $url.'scripts/comments.js'?>" ></script>
+		<script type="text/javascript" src="<?php echo $url.'scripts/home/homeMenu.js'?>" ></script>
 	</head>
 	<body>
 		<?php include 'view/home/header.html';?>
