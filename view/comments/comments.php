@@ -3,12 +3,10 @@
 </div>
 <div id="comment-container" class="comment-container">
 	<?php 
-
-	foreach ($comments as $id => $comment)
-	{
-		include 'view/comments/comment.php';
-	}
-
+		foreach ($comments as $id => $comment)
+		{
+			include 'view/comments/comment.php';
+		}
 	?>
 </div>
 <?php if ($isPaginated) {?>

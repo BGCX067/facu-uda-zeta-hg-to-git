@@ -9,7 +9,7 @@ class CommentModel extends Model {
 	 * @return multitype:Comment 
 	 */
 	public function getComments() {
-		$arr[] = array();			
+		$arr = array();			
 		$query = "SELECT 
 				`comment`.`id`,
 				`comment`.`name`,
@@ -22,7 +22,8 @@ class CommentModel extends Model {
 		if(isset($result)) {
 			while ($row = mysql_fetch_object($result)) {
 				if(isset($row)){
-					$arr[$row->id] = new Comment($row->id, $row->name,$row->email, $row->message, $row->imageUrl);
+					$com = new Comment($row->id, $row->name,$row->email, $row->message, $row->imageUrl);
+					array_push($arr, $com);
 				}
 			}
 		}
@@ -57,7 +58,7 @@ class CommentModel extends Model {
 		if($from < 0){
 			$from = 0;
 		}
-		$arr[] = array();
+		$arr = array();
 		$query = "SELECT
 				`comment`.`id`,
 				`comment`.`name`,
@@ -71,7 +72,8 @@ class CommentModel extends Model {
 			$i = 0;
 			while ($row = mysql_fetch_object($result)) {
 				if(isset($row)){
-					$arr[$i++] = new Comment($row->id, $row->name,$row->email, $row->message, $row->imageUrl);
+					$com = new Comment($row->id, $row->name,$row->email, $row->message, $row->imageUrl);
+					array_push($arr, $com);
 				}
 			}
 		}

@@ -2,10 +2,6 @@
 	
 	$controllerFolder = "controller/";
 	
-// 	$defaulController = "Comment";
-	
-// 	$defaultAction = "listCommnets";
-
 	$defaulController = "Home";
 	
 	$defaultAction = "home";
@@ -27,7 +23,6 @@
 		require_once($fileController);
 	else
 		header("HTTP/1.0 404 Not Found");
-	
 
 	$class = new ReflectionClass($controller);
 	$instance = $class->newInstance(null);

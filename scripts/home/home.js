@@ -30,7 +30,7 @@ window.onload = function() {
 	nav_tournament.addEventListener('click', function() {
 		setStyleActivate(nav_tournament);
 		load_page('Tournament','menu',"", dashboard);
-		load_page('Tournament','primera',"", content);
+		load_page('Tournament','positions',"tournament=divisionA", content);
 	}, false);
 	
 	function setStyleActivate(component) {

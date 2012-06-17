@@ -69,7 +69,12 @@ function validateForm() {
 		addClass(document.getElementsByName("email")[0],'error');
 		result = false;
 	}else{
-		removeClass(document.getElementsByName("email")[0],'error');
+		if(!validaMail(email)){
+			addClass(document.getElementsByName("email")[0],'error');
+			result = false;
+		}else{
+			removeClass(document.getElementsByName("email")[0],'error');
+		}
 	}
 
 	if(message == ""){
@@ -86,6 +91,10 @@ function validateForm() {
 	return result;
 }
 
+function validaMail(mail) {
+	var exr = /^[0-9a-z_\-\.]+@[0-9a-z\-\.]+\.[a-z]{2,4}$/i;
+		return exr.test(mail);
+	}
 
 function getMessage(id) {
 	
@@ -100,6 +109,10 @@ function getMessage(id) {
 	load_page("Comment", "retrieveComment", "id="+id,newDiv);
 	
 	clearForm();
+}
+function imageError(){
+	setTextContent(document.getElementById("file-name"),'La imagen que intenta subir es demasiado grande');
+	document.getElementsByName("file")[0].value ="";
 }
 
 function clearForm(){

@@ -24,6 +24,6 @@
 </div>
 <script type="text/javascript">
 	var homeMenu = new HomeMenu();
-	homeMenu.b 	
+	homeMenu.bindEvents();
 </script>
 

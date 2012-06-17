@@ -39,8 +39,8 @@ class CommentController {
 		if ((($_FILES["file"]["type"] == "image/gif")
 				|| ($_FILES["file"]["type"] == "image/jpeg")
 				|| ($_FILES["file"]["type"] == "image/jpg")
-				|| ($_FILES["file"]["type"] == "image/pjpeg"))
-				&& ($_FILES["file"]["size"] < 512 * 1024))
+				|| ($_FILES["file"]["type"] == "image/png"))
+				&& ($_FILES["file"]["size"] < (512 * 1024)))
 		{
 			$destination_path = getcwd().DIRECTORY_SEPARATOR."img_recibidas".DIRECTORY_SEPARATOR;
 			
@@ -48,12 +48,15 @@ class CommentController {
 			$target_path = $destination_path . basename($filename);
 			if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_path)){
 			}
-				
+			
+			$result = $this->model->insertComment($name, $email, $message, $filename);
+			echo "<script language='javascript' type='text/javascript'>window.top.window.getMessage($result);</script>";
+		}else if(count($_FILES) > 0 && $_FILES["file"]["size"] > (512 * 1024)){
+			echo "<script language='javascript' type='text/javascript'>window.top.window.imageError();</script>";
+		}else{
+			$result = $this->model->insertComment($name, $email, $message, $filename);
+			echo "<script language='javascript' type='text/javascript'>window.top.window.getMessage($result);</script>";
 		}
-		
-		$result = $this->model->insertComment($name, $email, $message, $filename);
-		
-		echo "<script language='javascript' type='text/javascript'>window.top.window.getMessage($result);</script>";
 	}
 	
 	public function retrieveComment() {
