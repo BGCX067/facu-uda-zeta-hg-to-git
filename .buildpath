@@ -3,5 +3,6 @@
 	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
 	<buildpathentry kind="src" path="view"/>
 	<buildpathentry kind="src" path="controller"/>
+	<buildpathentry kind="src" path="utils"/>
 	<buildpathentry kind="src" path="model"/>
 </buildpath>

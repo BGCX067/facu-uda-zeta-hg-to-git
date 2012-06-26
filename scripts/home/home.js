@@ -33,6 +33,16 @@ window.onload = function() {
 		load_page('Tournament','positions',"tournament=divisionA", content);
 	}, false);
 	
+	
+	for(var i=0; i < navs.length; i++) {
+		navs[i].addEventListener('mouseover', function() {
+			addClass(this, "selected");
+			}, false);
+		navs[i].addEventListener('mouseout', function() {
+			removeClass(this, "selected");
+			}, false);
+	}
+	
 	function setStyleActivate(component) {
 		addClass(component, "active");
 		var len=navs.length;

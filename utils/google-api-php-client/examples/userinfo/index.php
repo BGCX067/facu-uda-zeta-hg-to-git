@@ -22,10 +22,10 @@ $client = new apiClient();
 $client->setApplicationName("Google UserInfo PHP Starter Application");
 // Visit https://code.google.com/apis/console?api=plus to generate your
 // oauth2_client_id, oauth2_client_secret, and to register your oauth2_redirect_uri.
-// $client->setClientId('insert_your_oauth2_client_id');
-// $client->setClientSecret('insert_your_oauth2_client_secret');
-// $client->setRedirectUri('insert_your_redirect_uri');
-// $client->setDeveloperKey('insert_your_developer_key');
+// $client->setClientId('697914656822.apps.googleusercontent.com');
+// $client->setClientSecret('ftGL6r6gM75xT4ZxfwnDnHJg');
+// $client->setRedirectUri('utils/google-api-php-client/examples/userinfo/index.php');
+// $client->setDeveloperKey('AIzaSyD0HnKP5Z3DbPEIJOYnJ99SvFMTZcB0rw8');
 $oauth2 = new apiOauth2Service($client);
 
 if (isset($_GET['code'])) {

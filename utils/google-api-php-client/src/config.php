@@ -22,15 +22,15 @@ $apiConfig = array(
     'use_objects' => false,
   
     // The application_name is included in the User-Agent HTTP header.
-    'application_name' => '',
+    'application_name' => 'fubica',
 
     // OAuth2 Settings, you can get these keys at https://code.google.com/apis/console
-    'oauth2_client_id' => '',
-    'oauth2_client_secret' => '',
-    'oauth2_redirect_uri' => '',
+    'oauth2_client_id' => '697914656822.apps.googleusercontent.com',
+    'oauth2_client_secret' => 'ftGL6r6gM75xT4ZxfwnDnHJg',
+    'oauth2_redirect_uri' => 'http://localhost/depo-web/',
 
     // The developer key, you get this at https://code.google.com/apis/console
-    'developer_key' => '',
+    'developer_key' => 'AIzaSyD0HnKP5Z3DbPEIJOYnJ99SvFMTZcB0rw8',
 
     // OAuth1 Settings.
     // If you're using the apiOAuth auth class, it will use these values for the oauth consumer key and secret.
