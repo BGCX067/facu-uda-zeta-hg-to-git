@@ -9,7 +9,10 @@ class UserModel extends Model {
 		`user`.`id`,
 		`user`.`username`,
 		`user`.`email`,
-		`user`.`password`
+		`user`.`password`,
+		`user`.`user_type`,
+		`user`.`hash`,
+		`user`.`activate`
 		FROM `lab3`.`user`
 		WHERE `user`.`email` = '$email'";
 		  
@@ -17,7 +20,7 @@ class UserModel extends Model {
 		$user = null;
 		if (isset($result)){
 			$row = mysql_fetch_object($result);
-			$user = new User($row->id, $row->username,$row->email, $row->password);
+			$user = self::convertObjectToUser($row);
 		}
 		return $user;
 	}
@@ -27,7 +30,10 @@ class UserModel extends Model {
 		`user`.`id`,
 		`user`.`username`,
 		`user`.`email`,
-		`user`.`password`
+		`user`.`email`,
+		``user`.`user_type`,
+		`user`.`hash`,
+		`user`.`activate`
 		FROM `lab3`.`user`
 		WHERE `user`.`id` = '$id'";
 	
@@ -35,7 +41,7 @@ class UserModel extends Model {
 		$user = null;
 		if (isset($result)){
 			$row = mysql_fetch_object($result);
-			$user = new User($row->id, $row->username,$row->email, $row->password);
+			$user = self::convertObjectToUser($row);
 		}
 		return $user;
 	}
@@ -48,6 +54,10 @@ class UserModel extends Model {
 		$query = "INSERT INTO user (username,email,password) VALUES('$user->username','$user->email','$password')";	
 		$result = $this->db->query($query);
 		return mysql_insert_id();
+	}
+	
+	public static function convertObjectToUser($row,$id='id'){
+		return new User($row->$id, $row->username,$row->email, $row->password,$row->user_type,$row->hash,$row->activate);
 	}
 }
 ?>

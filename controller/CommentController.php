@@ -1,7 +1,7 @@
 <?php 
 include_once("model/CommentModel.php");
 class CommentController {
-	public $model;
+	private $model;
 
 	public function __construct() {
 		$this->model = new CommentModel();
