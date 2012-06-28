@@ -6,7 +6,10 @@ include_once("model/LoginModel.php");
 		public function __construct(){
 			$this->model = new LoginModel();
 		}
-				
+
+		public function loginPage($param) {
+			;
+		}
 		public function loginNative() {
 			$this->model->
 		}
