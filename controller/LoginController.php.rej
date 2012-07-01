@@ -1,0 +1,11 @@
+--- LoginController.php
++++ LoginController.php
+@@ -11,7 +11,7 @@
+ 			;
+ 		}
+ 		public function loginNative() {
+-			$this->model->
++			//$this->model->
+ 		}
+ 		public function loginGoogle() {
+ 			;

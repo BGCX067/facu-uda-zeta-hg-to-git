@@ -1,0 +1,13 @@
+--- User.php
++++ User.php
+@@ -1,8 +1,8 @@
+ <?php 
+ 
+ class User extends EntityBase {
+-	public const FUBICA = 1;
+-    public const GOOGLE = 2;
++	 const FUBICA = 1;
++     const GOOGLE = 2;
+ 	
+ 	public $username;
+ 	public $email;
