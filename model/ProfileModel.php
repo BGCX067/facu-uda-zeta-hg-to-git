@@ -1,7 +1,7 @@
 <?php 
-include_once("model/entity/Profile.php");
-include_once("model/Model.php");
-include_once("model/UserModel.php");
+include_once 'entity/Profile.php';
+include_once 'Model.php';
+include_once 'UserModel.php';
 
 class ProfileModel extends Model {
 	

@@ -16,3 +16,13 @@ var removeClass = function(ele, cls) {
         ele.className = ele.className.replace(reg, ' ');
     }
 };
+
+var removeAllChildrens = function(element) {
+	if ( element.hasChildNodes() )
+	{
+		while ( element.childNodes.length > 0 )
+		{
+			element.removeChild( element.firstChild );       
+		}  
+	}
+};

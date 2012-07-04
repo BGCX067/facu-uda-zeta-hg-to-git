@@ -1,18 +1,23 @@
 <?php 
-include_once("model/entity/User.php");
-include_once("model/Model.php");
+include_once 'entity/User.php';
+include_once 'Model.php';
 
 class UserModel extends Model {
+
+	public function __constructor() {
+		parent::__construct();
+	}
 	
 	public function getUserByEmail($email) {
+		if(empty($email)){
+			return null;
+		}
+		
 		$query = "SELECT
 		`user`.`id`,
 		`user`.`username`,
 		`user`.`email`,
-		`user`.`password`,
-		`user`.`user_type`,
-		`user`.`hash`,
-		`user`.`activate`
+		`user`.`password`
 		FROM `lab3`.`user`
 		WHERE `user`.`email` = '$email'";
 		  
@@ -30,10 +35,7 @@ class UserModel extends Model {
 		`user`.`id`,
 		`user`.`username`,
 		`user`.`email`,
-		`user`.`email`,
-		``user`.`user_type`,
-		`user`.`hash`,
-		`user`.`activate`
+		`user`.`password`
 		FROM `lab3`.`user`
 		WHERE `user`.`id` = '$id'";
 	
@@ -51,13 +53,13 @@ class UserModel extends Model {
 		if(isset($existUser)){
 			return -1;
 		}
-		$query = "INSERT INTO user (username,email,password) VALUES('$user->username','$user->email','$password')";	
+		$query = "INSERT INTO user (username,email,password) VALUES('$user->username','$user->email','$user->password')";	
 		$result = $this->db->query($query);
 		return mysql_insert_id();
 	}
 	
-	public static function convertObjectToUser($row,$id='id'){
-		return new User($row->$id, $row->username,$row->email, $row->password,$row->user_type,$row->hash,$row->activate);
+	public static function convertObjectToUser($row){
+		return new User($row->id, $row->username,$row->email, $row->password);
 	}
 }
 ?>

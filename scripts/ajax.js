@@ -62,16 +62,15 @@ function sendRequestPost(cotroller,action,params,contenedor,http) {
 	http.setRequestHeader("Connection", "close");
 
 	http.onreadystatechange =function(){
-        if(ajax.readyState==1){
+        if(http.readyState==1){
             //Sucede cuando se esta cargando la pagina
-            contenedor.innerHTML = "cargando()";//<-- Aca puede ir una precarga
-        }else if(ajax.readyState==4){
+        }else if(http.readyState==4){
             //Sucede cuando la pagina se cargó
-            if(ajax.status==200){
+            if(http.status==200){
                 //Todo OK
-                contenedor.innerHTML = ajax.responseText;
-                runJs(ajax.responseText);
-            }else if(ajax.status==404){
+                contenedor.innerHTML = http.responseText;
+                runJs(http.responseText);
+            }else if(http.status==404){
                 //La pagina no existe
                 contenedor.innerHTML = "La página no existe";
             }else{
